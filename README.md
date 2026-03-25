@@ -1,36 +1,65 @@
-🤖 Autonomous Multi-Step AI Agent
-📌 Overview
+# 🤖 Autonomous Multi-Step AI Agent
 
-This project implements an Autonomous Multi-Step Agent capable of interpreting user tasks, breaking them into multiple steps, and executing them using tool-based architecture.
+---
 
-The system simulates real-world workflow automation such as scheduling meetings, checking availability, cancelling, and sending notifications.
+## 📌 Overview
 
-🚀 Features
-✅ Multi-step task execution
-✅ Tool-based architecture (Calendar & Notification)
-✅ Dynamic time slot management (10AM–5PM)
-✅ Conflict detection and alternative suggestions
-✅ Multi-task handling (e.g., "schedule meeting and notify team")
-✅ Input validation and error handling
-✅ Continuous interaction (loop-based execution)
-🧠 How It Works
+This project implements an **Autonomous Multi-Step Agent** that can:
 
-The system follows a modular pipeline:
+* Understand user tasks
+* Break them into steps
+* Execute them using tools
 
-User Input → Interpreter → Planner → Executor → Tools → Output
+It simulates real-world workflow automation such as:
 
-Components:
-Interpreter: Extracts intent and entities (time, action)
-Planner: Converts task into executable steps
-Executor: Executes steps sequentially
-Tools:
-Calendar Tool (check, book, cancel)
-Notification Tool (mock email)
-⚙️ Tech Stack
-Python
-Modular architecture (core, tools, utils)
-Git & GitHub
-📁 Project Structure
+* Scheduling meetings
+* Checking availability
+* Cancelling meetings
+* Sending notifications
+
+---
+
+## 🚀 Features
+
+* Multi-step task execution
+* Tool-based architecture
+* Dynamic time slots (10AM–5PM)
+* Conflict detection and suggestions
+* Multi-task handling
+* Input validation
+* Continuous execution (loop-based system)
+
+---
+
+## 🧠 Architecture
+
+```
+User Input
+   ↓
+Interpreter
+   ↓
+Planner
+   ↓
+Executor
+   ↓
+Tools (Calendar / Notification)
+   ↓
+Output
+```
+
+---
+
+## ⚙️ Tech Stack
+
+* Python
+* Modular architecture
+* Git & GitHub
+
+---
+
+## 📁 Project Structure
+
+```
 ai-agent/
 │
 ├── core/
@@ -47,38 +76,73 @@ ai-agent/
 │
 ├── main.py
 └── README.md
-🧪 Example Usage
-Input:
+```
+
+---
+
+## 🧪 Example Usage
+
+### Input
+
+```
 Schedule meeting at 10AM and notify team
-Output:
+```
+
+### Output
+
+```
 [Step] Checking availability...
 [Step] Booking meeting...
 Booked 10AM
 [NOTIFICATION] schedule completed at 10AM
-Conflict Case:
+```
+
+---
+
+## ⚠️ Conflict Case
+
+### Input
+
+```
 Schedule meeting at 10AM
 Schedule meeting at 10AM
+```
 
-Output:
+### Output
 
+```
 10AM not available
 Try 11AM
-🔄 Supported Tasks
-Schedule meeting
-Cancel meeting
-Check availability
-Send notification
-Reschedule meeting
-⚠️ Note
+```
 
-This project uses a rule-based interpreter for reliability.
-The architecture is designed to integrate AI models (LLMs) for enhanced natural language understanding.
+---
 
-🎯 Future Improvements
-Integration with LLMs (Gemini / OpenAI)
-Real email API integration
-Database for persistent storage
-UI Dashboard
-👨‍💻 Author
+## 🔄 Supported Tasks
+
+* Schedule meeting
+* Cancel meeting
+* Check availability
+* Send notification
+* Reschedule meeting
+
+---
+
+## ⚠️ Note
+
+This project currently uses a **rule-based interpreter** for reliability.
+It is designed to integrate **AI models (LLMs)** for advanced understanding.
+
+---
+
+## 🎯 Future Improvements
+
+* Add AI (Gemini / OpenAI)
+* Real email integration
+* Database support
+* UI dashboard
+
+---
+
+## 👨‍💻 Author
 
 Prudhvi
